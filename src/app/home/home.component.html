@@ -1,0 +1,16 @@
+<h1 [ngClass]="{
+  'gray': h1Style,
+  'large': !h1Style
+ }">Welcome Home</h1>
+
+<h1>Terminals</h1>
+
+<ul *ngIf="terminals">
+ <li *ngFor="let terminal of terminals.payload">
+   <p>{{ terminal.city_id.name }} {{ terminal.address }}</p>
+ </li>
+</ul>
+
+<button (click)="firstClick()">click me</button>
+<button (click)="mymethode()">stay here</button>
+
